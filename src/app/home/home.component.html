@@ -1,0 +1,22 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Home"></Label>
+</ActionBar>
+
+<GridLayout class="page">
+    <RadDataForm [source]="form">
+        <TKEntityProperty tkDataFormProperty
+                          name="test" displayName="Test" i18n-displayName index="0">
+            <TKCustomPropertyEditor tkEntityPropertyEditor
+                                    (editorNeedsView)="editorNeedsView($event)"
+                                    (editorHasToApplyValue)="editorHasToApplyValue($event)"
+                                    (editorNeedsValue)="editorNeedsValue($event)"></TKCustomPropertyEditor>
+        </TKEntityProperty>
+        <TKEntityProperty tkDataFormProperty
+                          name="test2" displayName="Test2" i18n-displayName index="0">
+            <TKCustomPropertyEditor tkEntityPropertyEditor
+                                    (editorNeedsView)="editorNeedsView($event)"
+                                    (editorHasToApplyValue)="editorHasToApplyValue2($event)"
+                                    (editorNeedsValue)="editorNeedsValue($event)"></TKCustomPropertyEditor>
+        </TKEntityProperty>
+    </RadDataForm>
+</GridLayout>
